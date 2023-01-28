@@ -21,12 +21,12 @@
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;
-  
+
       &:focus {
         outline: none;
       }
     }
-  
+
     ::placeholder {
       font-family: Fira Sans;
       font-style: normal;
@@ -170,15 +170,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &--chosen {
-          filter: brightness(0) saturate(100%) invert(57%) sepia(94%)
-            saturate(2639%) hue-rotate(180deg) brightness(91%) contrast(104%);
-        }
-        &--notchosen {
-          filter: brightness(0) saturate(100%) invert(78%) sepia(6%)
-            saturate(424%) hue-rotate(171deg) brightness(93%) contrast(83%);
-        }
       }
     }
 

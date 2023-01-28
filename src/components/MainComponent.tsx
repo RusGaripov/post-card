@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./MainComponent.scss";
-import alignCenter from "../images/alignCenter.png";
-import alignJustify from "../images/alignJustify.png";
-import alignLeft from "../images/alignLeft.png";
-import alignRight from "../images/alignRight.png";
+import alignLeft from "../images/alignLeft.svg";
+import alignLeftActive from "../images/alignLeftActive.svg";
+import alignRight from "../images/alignRight.svg";
+import alignRightActive from "../images/alignRightActive.svg";
+import alignCenter from "../images/alignCenter.svg";
+import alignCenterActive from "../images/alignCenterActive.svg";
+import alignJustify from "../images/alignJustify.svg";
+import alignJustifyActive from "../images/alignJustifyActive.svg";
 import arrowDown from "../images/arrowDown.png";
 import fontSize from "../images/fontSize.png";
 import letterSpacing from "../images/letterSpacing.png";
@@ -30,7 +34,7 @@ const MainComponent = () => {
   useEffect(() => {
     let settings: any = localStorage.getItem("settings");
     const parsedSettings = JSON.parse(settings);
- 
+
     if (parsedSettings) {
       setFont(parsedSettings.font);
       setFontWeight(parsedSettings.fontWeight);
@@ -86,7 +90,11 @@ const MainComponent = () => {
               <option key={i}>{font}</option>
             ))}
           </select>
-          <img src={arrowDown} className="selectorbox__arrowicon" alt="arrowIcon" />
+          <img
+            src={arrowDown}
+            className="selectorbox__arrowicon"
+            alt="arrowIcon"
+          />
         </div>
 
         <div className="selectorbox sidepanel__fontsize_weight">
@@ -100,8 +108,16 @@ const MainComponent = () => {
             ))}
           </select>
 
-          <img src={arrowDown} className="selectorbox__arrowicon2" alt="arrowIcon" />
-          <img src={fontSize} className="selectorbox__fontsize" alt="arrowIcon" />
+          <img
+            src={arrowDown}
+            className="selectorbox__arrowicon2"
+            alt="arrowIcon"
+          />
+          <img
+            src={fontSize}
+            className="selectorbox__fontsize"
+            alt="arrowIcon"
+          />
 
           <select
             onChange={(e) => setFS(e.target.value)}
@@ -115,7 +131,10 @@ const MainComponent = () => {
         </div>
 
         <div className="selectorbox">
-          <div className="selectorbox__squarecolor" style={{ background: color ? color : "#B0171F" }}></div>
+          <div
+            className="selectorbox__squarecolor"
+            style={{ background: color ? color : "#B0171F" }}
+          ></div>
           <select
             onChange={(e) => setColor(e.target.value)}
             className="selectorbox__selectorcontent selectorbox__selectorcolor"
@@ -125,11 +144,19 @@ const MainComponent = () => {
               <option key={i}>{color.code.hex}</option>
             ))}
           </select>
-          <img src={arrowDown} className="selectorbox__arrowicon" alt="arrowIcon" />
+          <img
+            src={arrowDown}
+            className="selectorbox__arrowicon"
+            alt="arrowIcon"
+          />
         </div>
 
         <div className="selectorbox sidepanel__gaps">
-          <img src={lineHeight} className="selectorbox__lineheight" alt="line height" />
+          <img
+            src={lineHeight}
+            className="selectorbox__lineheight"
+            alt="line height"
+          />
           <img src={percent} className="selectorbox__percent" alt="percent" />
           <select
             onChange={(e) => setLH(e.target.value)}
@@ -163,32 +190,37 @@ const MainComponent = () => {
               className="selectorbox__aligns-alignbox"
             >
               <img
-                src={alignLeft}
-                className={tAlign === "left" ? "selectorbox__aligns-alignbox--chosen" : "selectorbox__aligns-alignbox--notchosen"}
+                src={tAlign === "left" ? alignLeftActive : alignLeft}
                 alt="align left"
               />
             </div>
 
-            <div onClick={() => setTAlign("center")} className="selectorbox__aligns-alignbox">
+            <div
+              onClick={() => setTAlign("center")}
+              className="selectorbox__aligns-alignbox"
+            >
               <img
-                src={alignCenter}
-                className={tAlign === "center" ? "selectorbox__aligns-alignbox--chosen" : "selectorbox__aligns-alignbox--notchosen"}
+                src={tAlign === "center" ? alignCenterActive : alignCenter}
                 alt="align center"
               />
             </div>
 
-            <div onClick={() => setTAlign("right")} className="selectorbox__aligns-alignbox">
+            <div
+              onClick={() => setTAlign("right")}
+              className="selectorbox__aligns-alignbox"
+            >
               <img
-               src={alignRight} 
-               className={tAlign === "right" ? "selectorbox__aligns-alignbox--chosen" : "selectorbox__aligns-alignbox--notchosen"}
-               alt="align right"
-                />
+                src={tAlign === "right" ? alignRightActive : alignRight}
+                alt="align right"
+              />
             </div>
 
-            <div onClick={() => setTAlign("justify")} className="selectorbox__aligns-alignbox">
+            <div
+              onClick={() => setTAlign("justify")}
+              className="selectorbox__aligns-alignbox"
+            >
               <img
-                src={alignJustify}
-                className={tAlign === "justify" ? "selectorbox__aligns-alignbox--chosen" : "selectorbox__aligns-alignbox--notchosen"}
+                src={tAlign === "justify" ? alignJustifyActive : alignJustify}
                 alt="align justify"
               />
             </div>
