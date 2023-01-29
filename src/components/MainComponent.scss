@@ -116,8 +116,8 @@
       width: 16px;
       height: 16px;
       position: absolute;
-      top: 12px;
-      left: 27px;
+      top: 11px;
+      left: 24px;
     }
 
     &__fontsize {
@@ -130,7 +130,7 @@
 
     &__selector_verticalgap,
     &__selector_gorizontalgap {
-      padding-left: 25px;
+      padding-left: 22px;
       font-family: Roboto;
       font-style: normal;
       font-weight: 400;
@@ -146,7 +146,7 @@
       width: 10px;
       height: 12px;
       position: absolute;
-      left: 100px;
+      left: 97px;
       top: 35%;
     }
 
@@ -155,8 +155,8 @@
       height: 16px;
       position: absolute;
       z-index: 10;
-      left: 132px;
-      top: 30%;
+      left: 128px;
+      top: 31%;
     }
 
     &__aligns {
@@ -177,14 +177,14 @@
       width: 12px;
       height: 14px;
       position: absolute;
-      top: 40%;
-      right: 25px;
+      top: 32%;
+      right: 27px;
     }
 
     &__squarecolor {
       position: absolute;
-      top: 10px;
-      left: 30px;
+      top: 9px;
+      left: 25px;
       width: 18px;
       height: 18px;
       border: 1px solid rgba(0, 0, 0, 0.1);
